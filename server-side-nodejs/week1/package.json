@@ -1,0 +1,12 @@
+{
+  "name": "week1",
+  "version": "1.0.0",
+  "description": "first assignment course server side nodejs from coursera HK University - full stack specialization module: ",
+  "main": "server-3.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "require": "^2.4.20"
+  }
+}
