@@ -20,8 +20,8 @@ app.use(morgan('dev'));
 
 //mounting routes
 app.use('/dishes', dishRouter);
-app.use('/leaders', leaderRouter);
-app.use('/promos', promoRouter);
+app.use('/leadership', leaderRouter);
+app.use('/promotions', promoRouter);
 
 //handle requests that are not supported / found in the server
 app.use(function(req, res, next) {
