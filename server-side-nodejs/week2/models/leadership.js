@@ -28,8 +28,8 @@ abbr: {
 description: {
    type: String,
    required: true
- }, 
-  timestamps: true
+ }
+}, {timestamps: true
 });
 
 var LeaderShips = mongoose.model('Leadership', leadershipSchema);
