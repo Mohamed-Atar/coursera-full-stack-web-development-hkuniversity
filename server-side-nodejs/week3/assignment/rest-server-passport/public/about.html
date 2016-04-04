@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top:50px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Guidlines for using this site</h1>
+                <ul>
+                    <li> <p> In order to sign in as admin, use the mongo shell and set the admin flag on  username to  <b>true</b> </p> </li>
+                    <li>open up a third node cmd </li>
+                    <li>move to the Confusion data base <b>use Confusion</b> </li>
+                    <li>show all the users <b>> db.users.find().pretty()</b> </li> 
+                    <li> copy the username line and put it in the new query  <b>find({"username" : "jeff11"})</b> to see the status of the admin flag</li>
+                    <li> use the UPDATE methode with $SET to change the admin <b> db.users.update({ "username" : "jeff11"},{$set: { "admin": true}})</b> </li>
+                    <li> restart the app </li>  
+                </ul>
+
+
+                <ul>
+               
+                    <li> <p>Logging  in to the site - use Postman </p> </li>   
+                    <li> open Postman and input <b>localhost:3443</b></li>
+                    <li> in the body write all your details <b> {"username":"jeff11", "password":"1234", "firstname":"jeff:,"lastname":"levy"} </b></li>
+                    <li> post using <b>/register</b> or <b>login</b> (if you have already registered) </li>
+                    <li> copy the token without the "" and past inside the header, with key <b>x-access-token</b> </li>
+                </ul> 
+              
+        
+           <br>
+           <a href="https://localhost:3443/">Express landing page</a>
+        </div>
+    </div>
+
+   
+    
+</body>
+</html>
