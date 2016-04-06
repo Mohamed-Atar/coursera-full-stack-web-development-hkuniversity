@@ -35,5 +35,13 @@
   "dishes": {
     "dataSource": "MongoDB",
     "public": true
+  },
+  "Customer": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Comments": {
+    "dataSource": "MongoDB",
+    "public": true
   }
 }

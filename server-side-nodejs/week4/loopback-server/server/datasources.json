@@ -7,9 +7,9 @@
     "host": "localhost",
     "port": 27017,
     "database": "conFusion",
-    "password": "",
+    "password": "Numsey01",
     "name": "MongoDB",
-    "user": "",
+    "user": "marcosmaia",
     "connector": "mongodb"
   }
 }

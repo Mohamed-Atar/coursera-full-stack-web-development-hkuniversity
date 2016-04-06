@@ -36,9 +36,7 @@ favsRouter.route('/')
                   }); 
 
         }else{
-              // see whether this dish already exists
               var test = favs.dishes.indexOf(req.body._id);
-              console.log("the test value is  "+test);
               if(test > -1){
                  var err = new Error('This recipe is already in your favorite list');
                  err.status = 401;
@@ -47,7 +45,7 @@ favsRouter.route('/')
               favs.dishes.push(req.body._id);
                 favs.save(function (err, favs) {
                   if (err) throw err;
-                  console.log('Another Dish has been added');
+                  console.log('Dish added');
                     res.json(favs);
                  });
               }
@@ -62,7 +60,6 @@ favsRouter.route('/')
     });
 });
 
-//use combination of these: http://stackoverflow.com/questions/3954438/remove-item-from-array-by-value
 favsRouter.route('/:favsId')
 .delete(Verify.verifyOrdinaryUser, function(req, res, next){
     Favorites.findOne({postedBy: req.decoded._doc._id}, function (err, favs) {
@@ -83,14 +80,5 @@ favsRouter.route('/:favsId')
         }
     });
 });
-
-//use combination of these: http://stackoverflow.com/questions/3954438/remove-item-from-array-by-value
-//favsRouter.route('/:favsId')
-//.delete(Verify.verifyOrdinaryUser,  function (req, res, next) {
-  //  Favorites.findByIdAndRemove(req.params.favsId, function (err, resp) { 
-    //    if (err) throw err;
-      //  res.json(resp);
-   // });
-//});
 
 module.exports = favsRouter;
